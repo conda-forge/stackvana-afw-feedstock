@@ -33,7 +33,7 @@ liblapacke:
 log4cxx:
 - 0.11.0
 mpich:
-- '4'
+- '3'
 pin_run_as_build:
   curl:
     max_pin: x
