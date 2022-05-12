@@ -29,6 +29,7 @@ build:
     - stackvana-build afw
 
 requirements:
+  build:
   host:
     - stackvana-core-impl =={{ version }}
     - python
