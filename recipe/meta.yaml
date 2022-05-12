@@ -30,7 +30,7 @@ build:
 
 requirements:
   host:
-    - stackvana-core =={{ version }}
+    - stackvana-core-impl =={{ version }}
     - python
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
