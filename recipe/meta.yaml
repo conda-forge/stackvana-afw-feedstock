@@ -30,20 +30,30 @@ build:
 
 requirements:
   host:
+    - stackvana-core =={{ version }}
     - python
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - stackvana-core =={{ version }}
+    - {{ compiler('fortran') }}
+    - apr
+    - boost
     - cfitsio
     - curl
     - fftw
     - gsl
+    - libaprutil
     - libblas
     - libcblas
     - liblapack
     - liblapacke
     - log4cxx
+    - minuit2
     - mpich
+    - numpy
+    - xpa
+    - starlink-ast
+    - wcslib
+    - rubin-env-nosysroot =3
   run:
     - python
     - stackvana-core =={{ version }}
