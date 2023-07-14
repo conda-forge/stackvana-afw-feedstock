@@ -13,6 +13,9 @@
 {% set patch_version = version.split(".")[-1] if version.split(".")[-1].__len__() == 2 else "0" + version.split(".")[-1] %}
 {% set dm_tag = "w_" + version.split(".")[1] + "_" + patch_version if version.startswith("0.") else "v" + version.replace(".", "_") %}
 
+{% set lsst_pyver = "3.11" %}
+{% set skip_pyver = lsst_pyver.replace(".", "") | int %}
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -22,7 +25,9 @@ source:
   sha256: aee14cae60eb800fc9dd42de52a5a01bee88a7ef7d21586889b26acfd8dc62f5
 
 build:
-  skip: true  # [win or py != 310]
+  {% if win or py != skip_pyver %}
+  skip: True
+  {% endif %}
   number: 0
   merge_build_host: true
   script:
