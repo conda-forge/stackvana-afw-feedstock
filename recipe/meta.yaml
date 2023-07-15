@@ -19,7 +19,7 @@ package:
 
 source:
   url: https://eups.lsst.codes/stack/src/tags/{{ dm_tag }}.list
-  sha256: fda2fde65284c5f76067c7a0ed57020531ad003b1d259934870e10e670494489
+  sha256: cb14b0b96698c595c9289632fde4a87d491d320da833598e2047a7b7bba49869
 
 build:
   skip: True  # [win or py != 311]
